@@ -37,7 +37,7 @@ class TodoList extends Component {
         return this.state.items.map((item) => {
             return (
                 <div key={item} className="list-group-item my-3">
-                    {item}  <button onClick={this.deleteTodo.bind(this, item)}><i className="far fa-trash-alt"></i></button>
+                    {item}  <button className="btn-danger" onClick={this.deleteTodo.bind(this, item)}><i className="far fa-trash-alt "></i></button>
 
                 </div>
             )
@@ -47,8 +47,16 @@ class TodoList extends Component {
 
     render() {
         return(
-            <div className="container-todo mt-5  mx-auto">
-                <h1 className="text-center mb-5">My Todo List</h1>
+            <div className="container-todo mt-5 mx-auto">
+                
+                <h1 className="text-center mb-5">
+                    <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/NYCS-bull-trans-W.svg/1200px-NYCS-bull-trans-W.svg.png"
+                    alt="avatar"
+                    style={{height: '60px'}}                    
+                    />
+                    My Todo List
+                </h1>
                 <form className="form-row">
                     <input 
                     value={this.state.userInput} 
